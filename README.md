@@ -4,7 +4,7 @@ This package contains modules for working with Gaussian and Binomial Distributio
 
 ## Files
 
-* `gaus_bin_dist/`: Distributions Package
+* `gaus_bin_dist/`: Distributions package
   * `__init__.py`: Initialization script
   * `Binomialdistribution.py`: Binomial class
   * `Gaussiandistribution.py`: Gaussian class
