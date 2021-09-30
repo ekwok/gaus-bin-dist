@@ -4,10 +4,11 @@ This package contains modules for working with Gaussian and Binomial Distributio
 
 ## Files
 
-* `__init__.py`: Initialization script
-* `Binomialdistribution.py`: Binomial class
-* `Gaussiandistribution.py`: Gaussian class
-* `Generaldistribution.py`: Distribution class
+* `gaus_bin_dist/`: Distributions Package
+  * `__init__.py`: Initialization script
+  * `Binomialdistribution.py`: Binomial class
+  * `Gaussiandistribution.py`: Gaussian class
+  * `Generaldistribution.py`: Distribution class
 * `license.txt`: MIT license
 * `setup.cfg`: Configuration file for code packaging
 * `setup.py`: Script for code packaging

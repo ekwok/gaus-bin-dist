@@ -5,7 +5,7 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 
 setup(name='gaus_bin_dist',
-      version='0.5',
+      version='0.6',
       description='Gaussian and Binomial Distributions',
       long_description=long_description,
       long_description_content_type='text/markdown',
