@@ -9,6 +9,8 @@ This package contains modules for working with Gaussian and Binomial Distributio
 * `Gaussiandistribution.py`: Gaussian class
 * `Generaldistribution.py`: Distribution class
 * `license.txt`: MIT license
+* `setup.cfg`: Configuration file for code packaging
+* `setup.py`: Script for code packaging
 
 ## Installation
 
