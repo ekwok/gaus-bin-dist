@@ -153,9 +153,9 @@ class Binomial(Distribution):
         except AssertionError as error:
             raise
         
-        binomial = Binomial()
-        binomial.p = self.p
-        binomial.n = self.n + other.n
+        p = self.p
+        n = self.n + other.n
+        binomial = Binomial(p, n)
         return binomial
 
 
