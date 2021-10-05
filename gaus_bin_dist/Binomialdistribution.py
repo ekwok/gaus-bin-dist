@@ -68,8 +68,8 @@ class Binomial(Distribution):
             None
         
         Returns: 
-            float: the p value
-            float: the n value
+            float: p value
+            float: n value
 
         """
         self.n = len(self.data)
@@ -79,7 +79,7 @@ class Binomial(Distribution):
         return self.p, self.n
 
 
-    def plot_bar(self):
+    def plot_histogram(self):
         """Function to output a histogram of the instance variable data using 
         matplotlib pyplot library.
         
@@ -92,7 +92,7 @@ class Binomial(Distribution):
         """
         plt.hist(self.data)
         plt.title('Histogram of Data')
-        plt.xlabel('Data')
+        plt.xlabel('Value')
         plt.ylabel('Count')
         plt.show()
 
@@ -113,15 +113,14 @@ class Binomial(Distribution):
         return a * b
 
 
-    def plot_bar_pdf(self):
+    def plot_pdf(self):
         """Function to plot the pdf of the binomial distribution
         
         Args:
             None
         
         Returns:
-            list: x values for the pdf plot
-            list: y values for the pdf plot
+            None
             
         """
         x, y = [], []
@@ -135,8 +134,6 @@ class Binomial(Distribution):
         plt.ylabel('Probability')
         plt.show()
 
-        return x, y
-
 
     def __add__(self, other):
         """Function to add together two Binomial distributions with equal p
@@ -148,10 +145,7 @@ class Binomial(Distribution):
             Binomial: Binomial distribution
             
         """
-        try:
-            assert self.p == other.p, 'p values are not equal'
-        except AssertionError as error:
-            raise
+        assert self.p == other.p, 'p values are not equal'
         
         p = self.p
         n = self.n + other.n

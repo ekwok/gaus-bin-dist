@@ -13,12 +13,10 @@ class Gaussian(Distribution):
             
     """
     def __init__(self, mu=0, sigma=1):
-        
         Distribution.__init__(self, mu, sigma)
 
 
     def calculate_mean(self):
-    
         """Function to calculate the mean of the data set.
         
         Args: 
@@ -36,7 +34,6 @@ class Gaussian(Distribution):
 
 
     def calculate_stdev(self, sample=True):
-
         """Function to calculate the standard deviation of the data set.
         
         Args: 
@@ -65,6 +62,22 @@ class Gaussian(Distribution):
         return self.stdev
 
 
+    def replace_stats_with_data(self):
+        """Function to calculate mean and stdev from the data set. The function updates the mean and stdev variables of the object.
+        
+        Args: 
+            None
+        
+        Returns: 
+            float: mean value
+            float: stdev value
+
+        """
+        self.mean = self.calculate_mean()
+        self.stdev = self.calculate_stdev()
+        return self.mean, self.stdev
+
+
     def plot_histogram(self):
         """Function to output a histogram of the instance variable data using 
         matplotlib pyplot library.
@@ -78,8 +91,9 @@ class Gaussian(Distribution):
         """
         plt.hist(self.data)
         plt.title('Histogram of Data')
-        plt.xlabel('Data')
+        plt.xlabel('Value')
         plt.ylabel('Count')
+        plt.show()
 
 
     def pdf(self, x):
@@ -97,7 +111,6 @@ class Gaussian(Distribution):
 
 
     def plot_histogram_pdf(self, n_spaces = 50):
-
         """Function to plot the normalized histogram of the data and a plot of the 
         probability density function along the same range
         
@@ -105,12 +118,10 @@ class Gaussian(Distribution):
             n_spaces (int): number of data points 
         
         Returns:
-            list: x values for the pdf plot
-            list: y values for the pdf plot
+            None
             
         """
-        mu = self.mean
-        sigma = self.stdev
+        assert self.data, 'data list is empty'
 
         min_range = min(self.data)
         max_range = max(self.data)
@@ -136,14 +147,12 @@ class Gaussian(Distribution):
 
         axes[1].plot(x, y)
         axes[1].set_title('Normal Distribution for \n Sample Mean and Sample Standard Deviation')
-        axes[0].set_ylabel('Density')
+        axes[1].set_ylabel('Density')
+        axes[1].set_xlabel('Value')
         plt.show()
-
-        return x, y
 
 
     def __add__(self, other):
-        
         """Function to add together two Gaussian distributions
         
         Args:
@@ -161,7 +170,6 @@ class Gaussian(Distribution):
 
 
     def __repr__(self):
-    
         """Function to output the characteristics of the Gaussian instance
         
         Args:
