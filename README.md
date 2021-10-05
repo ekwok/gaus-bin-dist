@@ -62,13 +62,13 @@ mean 32.0, standard deviation 4.381780460041329, p 0.4, n 80
 >>> gaussian.plot_histogram()
 ```
 
-![Gaussian Histogram](https://github.com/ekwok/gaus-bin-dist/tree/main/figures/gaussian/histogram.png?raw=true)
+![Gaussian Histogram](https://github.com/ekwok/gaus-bin-dist/blob/main/figures/gaussian/histogram.png)
 
 ```python
 >>> gaussian.plot_histogram_pdf()
 ```
 
-![Gaussian Histogram PDF](https://github.com/ekwok/gaus-bin-dist/tree/main/figures/gaussian/histogram_pdf.png?raw=true)
+![Gaussian Histogram PDF](https://github.com/ekwok/gaus-bin-dist/blob/main/figures/gaussian/histogram_pdf.png)
 
 ### Binomial Visualizations
 ```python
@@ -79,10 +79,10 @@ mean 32.0, standard deviation 4.381780460041329, p 0.4, n 80
 >>> binomial.plot_histogram()
 ```
 
-![Binomial Histogram](https://github.com/ekwok/gaus-bin-dist/tree/main/figures/binomial/histogram.png?raw=true)
+![Binomial Histogram](https://github.com/ekwok/gaus-bin-dist/blob/main/figures/binomial/histogram.png)
 
 ```python
 >>> binomial.plot_pdf()
 ```
 
-![Binomial PDF](https://github.com/ekwok/gaus-bin-dist/tree/main/figures/binomial/pdf.png?raw=true)
+![Binomial PDF](https://github.com/ekwok/gaus-bin-dist/blob/main/figures/binomial/pdf.png)
